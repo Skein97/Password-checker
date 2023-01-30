@@ -7,16 +7,21 @@ except ValueError:
 while 1:
     try:
         num2 = float(input('Type a number: '))
+        if num2 >= 0:
+            sum_nums = num2 + num1
+            print(f'Sum of numbers = {sum_nums}')
+            num1 = sum_nums
+        else:
+            print(f'Final sum of numbers = {sum_nums}')
+            print('Cannot calculate negative numbers! Finished!!')
+            break
     except ValueError:
         print('Please enter a number')
-    if num2 >= 0:
-        sum_nums = num2 + num1
-        print(f'Sum of numbers = {sum_nums}')
-        num1 = sum_nums
-    else:
-        print(f'Final sum of numbers = {sum_nums}')
+    except NameError:
+        print(f'Final sum of numbers = {num1}')
         print('Cannot calculate negative numbers! Finished!!')
         break
+
 
 # NUMBER SORTER
 # # Collect inputs
