@@ -1,9 +1,9 @@
 # RUNNING SUM
 while 1:
     try:
-        num1 = float(input('Type a  Positive number to start: '))
-        if num1 >= 0:
-            num1 = num1
+        num = float(input('Type a  Positive number to start: '))
+        if num >= 0:
+            num = num
             break
         else:
             print('Cannot calculate negative numbers!')
@@ -13,20 +13,20 @@ while 1:
 
 while 1:
     try:
-        num2 = float(input('Type a number: '))
-        if num2 >= 0:
-            sum_nums = num2 + num1
-            print(f'Sum of numbers = {sum_nums}')
-            num1 = sum_nums
+        num1 = float(input('Type a number: '))
+        if num1 >= 0:
+            num = num + num1
+            print(f'Sum of numbers = {num}')
+
         else:
-            print(f'Final sum of numbers = {sum_nums}')
+            print(f'Final sum of numbers = {num}')
             print('Cannot calculate negative numbers! Finished!!')
             break
     except ValueError:
         print('Please enter a number')
-    except NameError:
-        print(f'Final sum of numbers = {num1}')
-        break
+    # except NameError:
+    #     print(f'Final sum of numbers = {num}')
+    #     break
 
 
 # NUMBER SORTER
