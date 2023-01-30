@@ -1,8 +1,15 @@
 # RUNNING SUM
-try:
-    num1 = float(input('Type a number: '))
-except ValueError:
-    print('Please enter a number')
+while 1:
+    try:
+        num1 = float(input('Type a  Positive number to start: '))
+        if num1 >= 0:
+            num1 = num1
+            break
+        else:
+            print('Cannot calculate negative numbers!')
+            raise ValueError
+    except ValueError:
+        print('Please enter a positive number to start')
 
 while 1:
     try:
@@ -19,7 +26,6 @@ while 1:
         print('Please enter a number')
     except NameError:
         print(f'Final sum of numbers = {num1}')
-        print('Cannot calculate negative numbers! Finished!!')
         break
 
 
