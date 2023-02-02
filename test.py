@@ -1,33 +1,33 @@
 # RUNNING SUM
+# Take in an input
 while 1:
     try:
-        num = float(input('Type a  Positive number to start: '))
-        if num >= 0:
-            num = num
+        num1 = float(input('Type a  Positive number to start: '))
+        if num1 >= 0:
+            num1 = num1
             break
         else:
             print('Cannot calculate negative numbers!')
             raise ValueError
     except ValueError:
         print('Please enter a positive number to start')
+# Create a variable for the sum of numbers
+sum_num = num1
 
 while 1:
     try:
-        num1 = float(input('Type a number: '))
-        if num1 >= 0:
-            num = num + num1
-            print(f'Sum of numbers = {num}')
+        num2 = float(input('Type a number: '))
+        if num2 >= 0:
+            sum_num = sum_num + num2
+            print(f'Sum of numbers = {sum_num}')
 
         else:
-            print(f'Final sum of numbers = {num}')
             print('Cannot calculate negative numbers! Finished!!')
             break
     except ValueError:
         print('Please enter a number')
-    # except NameError:
-    #     print(f'Final sum of numbers = {num}')
-    #     break
 
+print(f'Final sum of numbers = {sum_num}')
 
 # NUMBER SORTER
 # # Collect inputs
